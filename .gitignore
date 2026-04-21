@@ -1,0 +1,3 @@
+connection_stuff.py
+venv/**
+*.code-workspace
