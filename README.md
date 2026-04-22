@@ -1,5 +1,7 @@
 ## Python-preparation Steps for running the program on your machine:
 
+NB:
+(connection_stuff.py is not checked in to github and must be created by you --> see private_stuff.py for info)
 
 1. Create a virtual environment:
 
@@ -42,7 +44,25 @@ psycopg-pool
 pip3 install -r requirements.txt
 ```
 
-4. to open a sql interface: (remember to then "use grocery" after you connect)
+4. create the grocery_activity table:
+
+```
+python3 create_tables.py
+```
+
+5. load data into the table:
+
+```
+python3 loadgrocerytable.py
+```
+
+6. Test the performance:
+```
+python3 groceryqueries.py
+```
+
+7. to open a sql interface: NB: the dbname should match the one you specified in the 
+connection_stuff.py file imported by private_stuff.py 
 
 ```
 cockroach sql --insecure --port 29004
