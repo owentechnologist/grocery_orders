@@ -1,3 +1,4 @@
 connection_stuff.py
 venv/**
 *.code-workspace
+__pycache__
